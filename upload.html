@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>Работа с файлами</title>
+</head>
+<body>
+
+ <div style="border: 0px solid blue;" align='center'>
+	  <table>
+	  	<tr>
+	  		<td><li><b>Oleg.bhv<b></td>
+	  		<!-- http://localhost:3000/dashboard/db/motionanalysis?from=1479572008124&to=1479572022326&editorTab=Legend&var-FileName=Oleg.bvh -->
+	  		<td><a href="bvhplayer/index.php?id=oleg.bvh">model</a></td>
+	  		<td><a href="http://localhost:3000/dashboard/db/motionanalysis?var-FileName=Oleg.bvh">analyze</a></td>
+	  	</tr>
+	  	<tr>
+	  		<td><li><b>Yaroslav.bhv<b></td>
+	  		<td><a href="bvhplayer/index.php?id=yaroslav.bvh">model</a></td>
+	  		<td><a href="http://localhost:3000/dashboard/db/motionanalysis?var-FileName=yaroslav.bvh">analyze</a></td>
+	  	</tr>
+	  	<tr>
+	  		<td><li><b>Ruslan.bhv<b></td>
+	  		<td><a href="bvhplayer/index.php?id=ruslan.bvh">model</a></td>
+	  		<td><a href="http://localhost:3000/dashboard/db/motionanalysis?var-FileName=ruslan.bvh">analyze</a></td>
+	  	</tr>
+	  </table>
+      <p><b> Загрузка файла </b></p>
+      <form action="upload.php" method="post" enctype="multipart/form-data">
+      <input type="file" name="filename"><br> 
+      <input type="submit" value="Загрузить"><br>
+      </form>
+      </div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+html{
+	font-family: Times, serif;
+}
+body {
+	background-color: #F8F8F8 ;
+	margin: 0px;
+	text-align: center;
+	color: #404040 ;			
+}
+p {
+	font-size: 1.2em;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+#wrapper{
+	overflow: hidden;
+	margin:0px auto;
+	width: 1000px;
+}
+#container{
+	overflow: hidden;
+	position: absolute;
+	background-color: #282828 ;
+	margin: 0px auto;
+	width:800px;
+	height: 600px; 
+	text-align: center;
+}
+#block{
+	overflow: hidden;
+	position: absolute;
+	background-color: #282828 ;
+	margin: 0px auto;
+	width:800px;
+	height: 600px; 
+	text-align: center;
+	z-index: 1;
+}
+#container2{
+	float: right;
+	margin: 0 auto;
+	text-align: center;
+	width:80%;
+	max-width:200px;
+	height: 600px; 
+}
+#bot{
+	float: clear;
+	color: #C8C8C8; 
+	overflow: hidden;
+	margin: 0 auto;
+	text-align: center;
+	width: 80%; 
+	max-width: 800px;
+}
+.customButton {
+	-moz-box-shadow:inset 0px 0px 0px -14px #ffffff;
+	-webkit-box-shadow:inset 0px 0px 0px -14px #ffffff;
+	box-shadow:inset 0px 0px 0px -14px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #ebe8eb) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #ebe8eb 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ebe8eb');
+	background-color:#ededed;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #d6d6d6;
+	display:inline-block;
+	color:#807e80;
+	/*font-family:times;*/
+	font-size:0.8em;
+	font-weight:bold;
+	padding:3px 5px;
+	text-decoration:none;
+}.customButton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ebe8eb), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #ebe8eb 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebe8eb', endColorstr='#ededed');
+	color:#404040;
+	background-color:#ebe8eb;
+}.customButton:active {
+
+	position:relative;
+	top:1px;
+}
+.scale{
+	width: 150px;
+}
+.upvec{
+	width: 35px;
+}
+.anim{
+	width: 120px;
+}
+#playpause{
+	padding:7px 5px;
+	width:30px;
+	height:26px;
+	background: url("../images/playpausePRE.png");
+	background-color:#ededed;
+}
+#playpause:hover{
+	background: url("../images/playpauseHOVER.png");
+	background-color:#ebe8eb;
+}
+#replay{
+
+	padding:7px 5px;
+	width:26px;
+	height:26px;
+	background-image: url("../images/replay.png");
+	background-size: cover;
+	background-color:#ededed;
+}
+#replay:hover{
+	background-image: url("../images/replayhover.png");
+	background-color:#ebe8eb;
+}
+footer {
+	position: fixed;
+	bottom:0px; 
+	margin: 0px auto;
+	width:100%;
+	text-align: center;
+}

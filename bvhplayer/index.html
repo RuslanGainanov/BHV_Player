@@ -1,0 +1,85 @@
+<!DOCTYPE HTML> 
+<html lang="en"> 
+	<head> 
+		<title>WebGL BVH Player</title> 
+		<meta charset="utf-8"> 
+		<link rel="stylesheet" href="css/example.css" />
+	</head> 
+	<body>
+ 		<h1>WebGL BVH Viewer</h1>
+ 		<div id="wrapper">
+ 			<div id="block">
+ 			  	<div id="bot">
+				        <p> To rotate the camera, hold ALT and click and drag on the canvas. 
+				        	To pan the camera, hold ALT and click and drag using the middle mouse button. 
+				        	To zoom in and out, use the mouse wheel or hold ALT and click and drag using the right mouse button.
+				        </p>
+			   	</div>
+			</div>
+			<div id="container">
+				   	<div id="bot">
+				        <p> To rotate the camera, hold ALT and click and drag on the canvas. 
+				        	To pan the camera, hold ALT and click and drag using the middle mouse button. 
+				        	To zoom in and out, use the mouse wheel or hold ALT and click and drag using the right mouse button.
+				        </p>
+			   		</div>
+			</div> 
+	        <div id="container2">
+	        	<p>
+	        		Animation Controls:
+	        		<br>
+		        	<button class="customButton anim" onclick='toggleTrace()'>Toggle Ghost</button>
+		        	<br>
+		        	<button class="customButton" id="playpause" onclick='pauseAnim()'></button>
+		        	<button class="customButton" id="replay" onclick='replayAnim()'></button>
+		        	<br>
+		        	<button class="customButton anim" onclick='changeFrame(1)'>Frame +</button>
+		        	<br>
+		        	<button class="customButton anim" onclick='changeFrame(-1)'>Frame -</button>
+		        </p>
+	        	<p>
+		        	Set Up Vector:
+		        	<br>
+		        	<button  class="customButton upvec" onclick='setUpVector(1,0,0)'>X</button>
+		        	<button  class="customButton upvec" onclick='setUpVector(0,1,0)'>Y</button>
+		        	<button  class="customButton upvec" onclick='setUpVector(0,0,1)'>Z</button>
+		        	<br>
+		        	<button  class="customButton upvec" onclick='setUpVector(-1,0,0)'>-X</button>
+		        	<button  class="customButton upvec" onclick='setUpVector(0,-1,0)'>-Y</button>
+		        	<button  class="customButton upvec" onclick='setUpVector(0,0,-1)'>-Z</button>
+		        </p>
+		        <p> Scale:
+		        	<br>
+		        	<button  class="customButton scale" onclick='scaleBones(1.4,1.4,1.4)'>Scale Bones Up</button>
+		        	<button  class="customButton scale" onclick='scaleBones(0.8,0.8,0.8)'>Scale Bones Down</button>
+		        	<button  class="customButton scale" onclick='scaleWorld(1.3,1.3,1.3)'>Scale World Up</button>
+		        	<button  class="customButton scale" onclick='scaleWorld(0.7,0.7,0.7)'>Scale World Down</button>
+		        </p>
+	        </div> 
+	    </div>
+	    <footer>
+	    	2014 - Fork, fixes &amp; updates by <a href="https://github.com/iamwolf/BVHplayer.js">Wolf Merkt</a><br>
+	    	2013 - Originally created by <a href="https://github.com/emretanirgan/BVH_Viewer">Emre Tanirgan and Kelsey Hurley</a>.
+	    </footer>
+   
+		
+		<script src="Three.js"></script> 
+		<script src="RequestAnimationFrame.js"></script> 
+		<script src="TrackballCamera.js"></script>
+		<script src="TrackballControls.js"></script>
+		<script src="Stats.js"></script>
+ 		<script src="jquery-1.9.1.min.js"></script>
+ 		 		 		
+		<script src="BVHPlayer.js"></script>
+		
+		<script>
+ 		var hmm = [];
+		$(document).ready(function() {
+			$.get( "samples/Destroy.bvh", function( data ) {	
+				hmm = data.split(/[\s]+/g);
+				initBVHPlayer();
+			});
+		});
+		</script>
+	</body> 
+</html> 
